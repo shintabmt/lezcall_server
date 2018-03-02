@@ -195,7 +195,7 @@ def contactList():
 
 @app.route('/', methods=['GET', 'POST'])
 def welcome():
-  resp = VoiceResponse
+  resp = VoiceResponse()
   resp.say("Welcome to Twilio")
   return str(resp)
 
