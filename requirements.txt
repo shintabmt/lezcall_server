@@ -4,6 +4,9 @@ MarkupSafe==0.23
 Werkzeug==0.9.6
 httplib2==0.9
 itsdangerous==0.24
-six==1.8.0
-twilio==6.0.0rc12
+six==1.*
+twilio==6.10.0
 wsgiref==0.1.2
+nose
+requests
+pyjwt
