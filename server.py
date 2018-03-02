@@ -196,9 +196,9 @@ def contactList():
 
 @app.route('/', methods=['GET', 'POST'])
 def welcome():
-#  resp = twilio.twiml.Response()
-#  resp.say("Welcome to Twilio")
-  return str("")
+  resp = twilio.twiml.Response()
+  resp.say("Welcome to Twilio")
+  return str(resp)
 
 @app.route('/countDuration', methods=['GET', 'POST'])
 def countDuration():
