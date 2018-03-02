@@ -3,7 +3,6 @@ import os
 import json
 from flask import Flask, request
 from twilio.rest import Client
-import twilio.twiml
 from datetime import date
 
 from twilio.jwt.access_token import AccessToken
@@ -196,7 +195,7 @@ def contactList():
 
 @app.route('/', methods=['GET', 'POST'])
 def welcome():
-  resp = twilio.twiml.Response()
+  resp = VoiceResponse
   resp.say("Welcome to Twilio")
   return str(resp)
 
