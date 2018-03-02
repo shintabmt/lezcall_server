@@ -68,14 +68,14 @@ def token():
 
 @app.route('/outbound', methods=['POST'])
 def outbound():
-    response = twiml.Response()
+    response = VoiceResponse()
     with response.dial() as dial:
         dial.number("+16518675309")
     return str(response)
   
 @app.route('/outgoing', methods=['GET', 'POST'])
 def outgoing():
-  resp = twilio.twiml.Response()
+  resp = VoiceResponse()
   from_value = request.values.get('From')
   caller = request.values.get('Caller')
   caller_value=caller[7:]
